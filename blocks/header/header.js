@@ -99,10 +99,10 @@ export default async function decorate(block) {
   // decorate nav DOM
   block.textContent = '';
   const nav = document.createElement('nav');
-  nav.id = 'nav';
+  nav.id = 'nav-diji';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
-  const classes = ['brand-diji', 'sections-diji', 'tools-diji'];
+  const classes = ['brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
